@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link type="text/css" rel="stylesheet" href="./src/assets/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./src/assets/bootstrap/dist/css/bootstrap-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="./src/assets/bootstrap/dist/css/bootstrap-reboot.min.css">
+    <link type="text/css" rel="stylesheet" href="./src/assets/bootstrap/dist/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        População em Situação de Rua
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="left-col">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="card-heading">
+                            <h4>Condição por Faixa Etária
+                                <select id="conditionFilter">
+                                    <option value="hipertenso">Hipertenso</option>
+                                    <option value="diabetico">Diabético</option>
+                                    <option value="doenca_respiratoria">Doença Respiratória</option>
+                                    <option value="tuberculose">Tuberculose</option>
+                                    <option value="internacao_ult_12meses">Internação Ult. 12 meses</option>
+                                    <option value="prob_saude_mental">Prob. Saúde Mental</option>
+                                    <option value="possui_deficiencia">Possui Deficiência</option>
+                                    <option value="tem_teve_cancer">Tem/Teve Câncer</option>
+                                </select>
+                            </h4>
+                        </div>
+                        <div class="chart" id="barChart"></div>
+                    </div>
+                    <div class="col-12">
+                        <div id="card-heading">
+                            <h4>Tempo X Saúde</h4>
+                        </div>
+                        <div class="chart" id="barChart2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-col d-flex flex-column">
+                <div class="row flex-fill">
+                    <div class="col-12">
+                        <div id="card-heading">
+                            <h4>Histórico de Cadastro por Sexo</h4>
+                        </div>
+                        <div class="chart" id="barChartHistorical"></div>
+                    </div>
+                </div>
+                <div class="row flex-fill">
+                    <div class="col-12">
+                        <div id="card-heading">
+                            <h4>Raça/Cor por Localização</h4>
+                            <select id="locationFilter">
+                                <option value="municipio">Município</option>
+                                <option value="regiao">Região</option>
+                                <option value="macrorregiao">Macrorregião</option>
+                            </select>
+                        </div>
+                        <div class="chart" id="barChartLocation"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./src/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./src/assets/echarts/echarts.min.js"></script>
+    <script src="./src/assets/jquery/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>
